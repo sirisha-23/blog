@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+       body {
+            background-image: url("https://www.inspirius.dk/wp-content/uploads/2017/03/loginBackground.png");
+            font-family: Arial;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }        
+        .container {
+            
+            width: 400px;
+            padding: 20px;
+            background-color:white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="submit"] {
+            width: 95%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color:blue;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: blue;
+        }      
+    </style>
+</head>  
+<body>
+    
+         <div class="container">
+            <center><h1>Login</h1></center>
+            <form method="POST">
+                <label >username:</label>
+                <input name="username" type="text"><br><br>
+                <label >Password:</label>
+                <input name="password" type="text"><br><br>
+                <input type="submit" value="Login">
+                <p>If you don't have a account goto 
+                <a href="{{url_for('reg')}}">register</a></p>
+        </form>
+        </div>
+    
+</body>
+</html>

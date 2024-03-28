@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("https://static.vecteezy.com/system/resources/previews/000/664/710/original/vector-abstract-technology-background-hi-tech-communication-digital-background.jpg");
+            font-family: Arial;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 400px;
+            padding: 20px;
+            background-color:white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+       
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        textarea {
+            width: 95%;
+            padding: 9px;
+            margin-bottom: 1px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+    <form method="post">
+        <center> <h1>Register</h1></center>
+        <label for="username">Username:</label>
+        <input name='username' type="text" id="username" required><br><br>
+        <label for="mobile">Mobile No:</label>
+        <input name="mobile" type="tel" id="mobile" required><br><br>
+        <label for="email">Email ID:</label>
+        <input name="email" type="email" id="email" required><br><br>
+        <label for="address">Address:</label>
+        <input name='address' type="text" id="address" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required><br><br>
+        <input type="submit" value="Register">
+        <p>If already have a account goto 
+        <a href="{{url_for('login')}}">login</a> </p>   
+    </form>
+    </div>
+</body>
+</html>
